@@ -8,7 +8,7 @@ public class Car {
     private String color;
 
     public Car(){
-        System.out.println("I am car");
+        this.color="gold";
     }
 
     public String getColor() {
