@@ -7,8 +7,12 @@ import org.springframework.stereotype.Component;
 public class Person {
 
     private String name;
+    private final Car car;
+
     @Autowired
-    private Car car;
+    public Person(Car c){
+        this.car=c;
+    }
 
     public String getName() {
         return name;
@@ -20,9 +24,5 @@ public class Person {
 
     public String getCar() {
         return car.getColor();
-    }
-
-    public void setCar(Car car) {
-        this.car = car;
     }
 }
