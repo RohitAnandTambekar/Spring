@@ -7,6 +7,10 @@ public class Car {
 
     private String color;
 
+    public Car(){
+        System.out.println("I am car");
+    }
+
     public String getColor() {
         return color;
     }

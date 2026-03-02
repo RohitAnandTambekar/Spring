@@ -9,11 +9,13 @@ import java.util.function.Supplier;
 public class Main {
     public static void main(String[] args) {
         var context=new AnnotationConfigApplicationContext(ProjectConfig.class);
-        Car c=new Car();
-        c.setColor("purple");
-        Supplier<Car> carSupplier=()->c;
-        context.registerBean("car",Car.class,carSupplier);
-        Car carbean=context.getBean("car",Car.class);
-        System.out.println(carbean.getColor());
+
+        Person p=context.getBean(Person.class);
+        Car c=context.getBean(Car.class);
+
+        System.out.println(p.getName());
+        System.out.println(p.getCar());
+        System.out.println(c);
+        System.out.println(c.getColor());
     }
 }
